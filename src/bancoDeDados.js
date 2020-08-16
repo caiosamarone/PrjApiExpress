@@ -24,6 +24,12 @@ function getProdutos(){
     return Object.values(produtos)  //retorna todos valores do objeto
 }
 
+function excluirProduto(id){
+    const produto = produtos[id]
+    delete produtos[id]
+    return produto
+}
+
 module.exports ={
-    salvarProduto, getProdutos, getProdutoById   //a partir do exports, todas essas funcoes tornam visiveis para quem requerer o modulo.
+    salvarProduto, getProdutos, getProdutoById, excluirProduto   //a partir do exports, todas essas funcoes tornam visiveis para quem requerer o modulo.
 }
